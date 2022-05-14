@@ -40,13 +40,13 @@ La requête :
 ## Ajouter un film
 
 ```sql
-
+INSERT INTO `movies` (`movie_ID`, `title`, `release_date`, `duration`, `director`, `creation_date`, `update_date`) VALUES (NULL, 'Nom du film ', '2011-05-06', '01:52:00', 'Nom du réalisateur', '2022-05-14', '2022-05-14');
 ```
 
 ## Ajouter un acteur 
 
 ```sql
-
+INSERT INTO `actors` (`actor_ID`, `last_name`, `first_name`, `date_of_birth`, `creation_date`, `update_date`) VALUES (NULL, 'Nom', 'Prenom', '1965-04-04', '2022-05-14', '2022-05-14');
 ````
 
 ## Modifier un film
