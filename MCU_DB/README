@@ -1,0 +1,68 @@
+# Requêtes SQL
+ 
+
+## Les titres et dates de sorties des films du plus récent au plus ancien
+
+La requête : 
+
+```sql
+SELECT title, release_date FROM `movies` ORDER BY release_date DESC
+```
+
+## Les noms, prénoms et ages des acteurs de plus de 30 ans dans l'ordre alphabétique
+
+La requête :
+
+```sql
+
+````
+
+## La liste des acteurs pour un film donné
+
+La requête : 
+
+```sql
+
+```
+
+## La liste des films pour un acteur donné
+
+La requête :
+
+```sql
+
+```
+
+
+
+# Bonus
+
+## Ajouter un film
+
+```sql
+
+```
+
+## Ajouter un acteur 
+
+```sql
+
+````
+
+## Modifier un film
+
+```sql
+
+```
+
+## Supprimer un acteur 
+
+```sql
+
+````
+
+## Afficher les 3 derniers acteurs ajoutés
+
+```sql
+
+````
