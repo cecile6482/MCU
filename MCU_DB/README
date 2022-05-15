@@ -21,7 +21,18 @@ DESC
 La requête :
 
 ```sql
-
+SELECT
+    first_name,
+    last_name,
+    (YEAR(NOW()) - YEAR(date_of_birth)) AS age
+    FROM
+        `actors`
+    WHERE
+        YEAR(date_of_birth) < 1992
+    ORDER BY
+        last_name,
+        first_name 
+        ASC
 ````
 
 ## La liste des acteurs pour un film donné
@@ -77,17 +88,17 @@ INSERT INTO `actors` (`actor_ID`, `last_name`, `first_name`, `date_of_birth`, `c
 ## Modifier un film
 
 ```sql
-
+UPDATE movies SET title = 'Avengers' WHERE movie_ID = 6;
 ```
 
 ## Supprimer un acteur 
 
 ```sql
-
+DELETE FROM actors WHERE actor_ID = 10
 ````
 
 ## Afficher les 3 derniers acteurs ajoutés
 
 ```sql
-
+SELECT * FROM `actors` ORDER BY actor_ID DESC LIMIT 3;
 ````
