@@ -101,4 +101,6 @@ DELETE FROM actors WHERE actor_ID = 10
 
 ```sql
 SELECT * FROM `actors` ORDER BY actor_ID DESC LIMIT 3;
-````
+```
+Ouais pas d'erreur Correction Steeven.
+```
