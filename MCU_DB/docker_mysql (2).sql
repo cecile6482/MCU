@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database
--- Generation Time: May 14, 2022 at 12:18 PM
+-- Generation Time: May 17, 2022 at 08:20 AM
 -- Server version: 5.7.38
 -- PHP Version: 8.0.19
 
@@ -82,7 +82,7 @@ INSERT INTO `movies` (`movie_ID`, `title`, `release_date`, `duration`, `director
 (3, 'Iron Man 2', '2010-05-07', '02:05:00', 'Jon Favreau', '2022-05-13', '2022-05-13'),
 (4, 'Thor', '2011-05-06', '01:54:00', 'Kenneth Branagh', '2022-05-13', '2022-05-13'),
 (5, 'Captain America: The First Avenger', '2011-07-22', '02:04:00', 'Joe Johnston', '2022-05-13', '2022-05-13'),
-(6, 'Marvel\'s The Avengers', '2012-05-04', '02:23:00', 'Joss Whedon', '2022-05-13', '2022-05-13'),
+(6, 'Avengers', '2012-05-04', '02:23:00', 'Joss Whedon', '2022-05-13', '2022-05-13'),
 (7, 'Iron Man 3', '2013-05-03', '02:11:00', 'Shane Black', '2022-05-13', '2022-05-13'),
 (8, 'Thor: The Dark World', '2013-11-08', '01:52:00', 'Alan Taylor', '2022-05-13', '2022-05-13'),
 (9, 'Captain America: The Winter Soldier', '2014-04-04', '02:16:00', 'Anthony and Joe Russo', '2022-05-13', '2022-05-13'),
@@ -202,13 +202,15 @@ INSERT INTO `movies_actors` (`ID_actor`, `iD_movie`) VALUES
 -- Indexes for table `actors`
 --
 ALTER TABLE `actors`
-  ADD PRIMARY KEY (`actor_ID`);
+  ADD PRIMARY KEY (`actor_ID`),
+  ADD UNIQUE KEY `Unique` (`first_name`,`last_name`,`date_of_birth`);
 
 --
 -- Indexes for table `movies`
 --
 ALTER TABLE `movies`
-  ADD PRIMARY KEY (`movie_ID`);
+  ADD PRIMARY KEY (`movie_ID`),
+  ADD UNIQUE KEY `Unique` (`title`,`release_date`);
 
 --
 -- AUTO_INCREMENT for dumped tables
